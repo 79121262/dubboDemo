@@ -9,9 +9,8 @@
 
     <dubbo:application name="dubbo-service"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <!-- <dubbo:registry address="zookeeper://127.0.0.1:2181?backup=127.0.0.1:2182,127.0.0.1:2183"/> -->
     <dubbo:provider cluster="failfast"/>
-
     <bean id="goodsService" class="com.tc.service.impl.GoodsServiceImpl"/>
-    
     <dubbo:service interface="com.tc.service.GoodsService" ref="goodsService"/>
 </beans>
