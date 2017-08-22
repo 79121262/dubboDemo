@@ -103,7 +103,7 @@
 				<version>6.1.26</version>
 				<artifactId>maven-jetty-plugin</artifactId>
 				<configuration>
-					<contextPath>/dubbo_demo_web</contextPath>
+					<contextPath>/src/main/java/resources</contextPath>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
 					<stopKey>foo</stopKey>
 					<stopPort>9998</stopPort>
