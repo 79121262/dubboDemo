@@ -11,7 +11,6 @@ public class GoodsAction {
     private static GoodsService goodsService;
 
     /**
-     * 
      * @Title: main 
      * @Description: 模拟spring mvc的 请求 类似于 @Controller
      * @param args
@@ -26,6 +25,5 @@ public class GoodsAction {
         ApplicationContext  dubbo_cusumer = new ClassPathXmlApplicationContext("dubbo-config.xml");
         GoodsService  service = (GoodsService) dubbo_cusumer.getBean("goodsService");
         System.out.println(service.findAllGoodsByParams());
-        System.in.read();
     }
 }

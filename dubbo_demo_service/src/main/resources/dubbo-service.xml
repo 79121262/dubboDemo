@@ -7,8 +7,11 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <!-- <import resource="dubbo-provider.xml"></import> -->
-    <!-- spring注入 -->
-    <bean id="getGoodService" class="com.tc.service.GoodsService"></bean>
-   
+    <dubbo:application name="dubbo-service"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:provider cluster="failfast"/>
+
+    <bean id="goodsService" class="com.tc.service.impl.GoodsServiceImpl"/>
+    
+    <dubbo:service interface="com.tc.service.GoodsService" ref="goodsService"/>
 </beans>

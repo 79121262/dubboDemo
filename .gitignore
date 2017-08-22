@@ -1,0 +1,7 @@
+/dubbo_demo_web/.settings
+/.settings
+/dubbo_demo_api/.settings
+/dubbo_demo_service/.settings
+/dubbo_demo_service/target/*
+/dubbo_demo_api/target/*
+/dubbo_demo_web/target/*
