@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")  
 public class GoodsController implements InitializingBean{
-//    @Autowired
-//    private GoodsService goodsService;
-//    @RequestMapping("/hello.do")
-//    @ResponseBody
-//    public String sayHello() {
-//    	List<Goods> g=goodsService.findAllGoodsByParams();
-//    	for (Goods goods : g) {
-//			System.out.println(goods);
-//		}
-//        return "";
-//    }
+    @Autowired
+    private GoodsService goodsService;
+    @RequestMapping("/hello.do")
+    @ResponseBody
+    public String sayHello() {
+    	List<Goods> g=goodsService.findAllGoodsByParams();
+    	for (Goods goods : g) {
+			System.out.println(goods);
+		}
+        return "";
+    }
     
     @RequestMapping("/hello1.do")
     @ResponseBody
